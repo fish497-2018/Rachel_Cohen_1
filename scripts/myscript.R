@@ -13,16 +13,13 @@ library(ggplot2)
 ggplot(data = fish_data_cat, mapping = aes(length, scalelength, color = lakeid)) +
   geom_point()
 
-# make a histogram of scalelength
-ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
-  geom_histogram()
 
 #Plot histogram of scale length by fish categorical size
 ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
   geom_histogram()
 
+#fixed so that there is a fixed bin
+scale_hist_by_length <- ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) + 
+  geom_histogram(mapping = NULL, stat = "bin", bins = 80)
 
-
-#THIS is my second time suggesting that..
-ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
-  geom_histogram()
+ggsave("plots/scale_hist_by_length.jpg", plot = last_plot())
