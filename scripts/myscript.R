@@ -10,7 +10,7 @@ fish_data_cat = fish_data %>%
 
 library(ggplot2)
 
-scatter_length_scalelength <- ggplot(data = fish_data_cat, mapping = aes(length, scalelength, color = lakeid)) +
+ggplot(data = fish_data_cat, mapping = aes(length, scalelength, color = lakeid)) +
   geom_point()
 
 ggsave("plots/scatter_length_scalelength.jpg", plot = last_plot())
