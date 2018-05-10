@@ -10,9 +10,10 @@ fish_data_cat = fish_data %>%
 
 library(ggplot2)
 
-ggplot(data = fish_data_cat, mapping = aes(length, scalelength, color = lakeid)) +
+scatter_length_scalelength <- ggplot(data = fish_data_cat, mapping = aes(length, scalelength, color = lakeid)) +
   geom_point()
 
+ggsave("plots/scatter_length_scalelength.jpg", plot = last_plot())
 
 #Plot histogram of scale length by fish categorical size
 ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
