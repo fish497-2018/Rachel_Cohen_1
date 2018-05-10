@@ -10,3 +10,10 @@
   Data used to make our plots
 
 **plots**
+  --(scatterplot_length_by_scalelength)["plots/scatter_length_scalelength.jpg"]
+  --(Histrgram_by_length)["plots/scale_hist_by_length.jpg"]
+  Histogram with modified bin of 80 by length
+  
+README.md
+.gitignore
+  
