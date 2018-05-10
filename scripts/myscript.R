@@ -13,6 +13,9 @@ library(ggplot2)
 ggplot(data = fish_data_cat, mapping = aes(length, scalelength, color = lakeid)) +
   geom_point()
 
+# make a histogram of scalelength
+ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
+  geom_histogram()
 
 #Plot histogram of scale length by fish categorical size
 ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
